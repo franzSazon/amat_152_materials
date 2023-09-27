@@ -10,6 +10,16 @@ int main(){
     printf("Enter a two digit number: ");
     scanf("%d", &num);
 
+    // Handle error case
+    if(num < 10 || num > 99){
+        printf("Invalid input");
+        return 0;
+    }
+    
+    // Breakdown two digit number into singular digits
+    num1 = num % 10;
+    num2 = num / 10;
+
     // Breakdown two digit number into singular digits
     num1 = num % 10;
     num2 = num / 10;

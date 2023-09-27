@@ -10,6 +10,12 @@ int main(){
     printf("Enter a three digit number: ");
     scanf("%d", &num);
 
+    // Handle error case
+    if(num < 100 || num > 999){
+        printf("Invalid input");
+        return 0;
+    }
+
     // Breakdown three digit number into singular digits
     num1 = num % 10;
     num2 = (num / 10) % 10;
