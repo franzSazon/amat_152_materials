@@ -1,16 +1,19 @@
 #include <stdio.h>
- 
+
 int main(){
 
-    int num1, num2;
+    // Declare Variables
+    double num1, num2;
 
+    // Collect User Input
     printf("Enter two numbers: ");
-    scanf("%d %d", &num1, &num2);
+    scanf("%lf %lf", &num1, &num2);
 
-    printf("Sum: %d\n", num1 + num2);
-    printf("Difference: %d\n", num2 - num1);
-    printf("Product: %d\n", num1 * num2);
-    printf("Quotient: %d\n", num2 / num1);
-    
+    // Do operations and print result
+    printf("Sum: %lf + %lf = %lf\n", num1, num2, num1 + num2);
+    printf("Difference: %lf - %lf = %lf\n", num2, num1, num2 - num1);
+    printf("Product: %lf * %lf = %lf\n", num1, num2, num1 * num2);
+    printf("Quotient: %lf / %lf = %lf\n", num2, num1, num2 / num1);
+
     return 0;
 }

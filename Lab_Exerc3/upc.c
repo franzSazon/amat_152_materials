@@ -2,11 +2,13 @@
  
 int main(){
 
+    // Declare Variables
     int d, i1, i2, i3, i4, i5, j1, j2, j3, j4, j5, firstsum, secondsum, total, upc;
 
-    printf("Enter the upc code digit: ");
+    printf("UPC: ");
     scanf("%d", &upc);
 
+    // Digit Separation through modulus operator
     d = upc % 10;
     i1 = upc / 10000 % 10;
     i2 = upc / 1000 % 10;
@@ -19,6 +21,7 @@ int main(){
     j4 = upc / 100 % 10;
     j5 = upc / 10 % 10;
 
+    // Calculate the check digit
     firstsum = d + i2 + i4 + j1 + j3 + j5;
     secondsum = i1 + i3 + i5 + j2 + j4 + j5;
     total = firstsum*3 + secondsum;
@@ -26,7 +29,8 @@ int main(){
     total = total % 10;
     total = 9 - total;
 
-    printf("\nThe check digit code is: %d", total);
+    // Print the check digit
+    printf("\nCheck digit is: %d", total);
 
     return 0;
 }

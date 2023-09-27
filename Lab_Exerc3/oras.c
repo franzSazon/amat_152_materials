@@ -2,8 +2,10 @@
  
 int main(){
 
+    // Declare Variables
     int seconds, minutes, hours, days;
 
+    // Collect User Input
     printf("Enter number of seconds: ");
     scanf("%d", &seconds);
 
@@ -24,8 +26,7 @@ int main(){
         seconds = seconds % 86400 % 3600 % 60;
     }
     
-    
-
+    // Print formatted output as days, hours, minutes, seconds
     printf("%d days, %d hours, %d minutes, %d seconds", days, hours, minutes, seconds);
     
 
